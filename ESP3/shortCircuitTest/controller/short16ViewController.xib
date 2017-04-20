@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="short16ViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="高频电源恢复上电" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQH-kW-dzw">
+                    <rect key="frame" x="91" y="265" width="139" height="38"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dae-U4-jGF">
+                    <rect key="frame" x="30" y="353" width="260" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="ThE-jg-HMX"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="V9a-UQ-xLe"/>
+                    </constraints>
+                    <state key="normal" title="下一步" backgroundImage="启动-常态">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="启动-按下去的颜色值"/>
+                    <connections>
+                        <action selector="tap16:" destination="-1" eventType="touchUpInside" id="Fvx-qL-vju"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="设备名称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXK-Yy-kY5">
+                    <rect key="frame" x="58" y="215" width="70" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="？" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMC-jZ-1hj">
+                    <rect key="frame" x="176" y="215" width="114" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Dae-U4-jGF" secondAttribute="trailing" constant="30" id="Auo-8V-6ub"/>
+                <constraint firstItem="Dae-U4-jGF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="Usd-Tn-EaS"/>
+                <constraint firstItem="JQH-kW-dzw" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Z0A-uc-50J"/>
+                <constraint firstAttribute="bottom" secondItem="Dae-U4-jGF" secondAttribute="bottom" constant="170" id="bMy-jR-Jhf"/>
+                <constraint firstItem="CMC-jZ-1hj" firstAttribute="centerY" secondItem="cXK-Yy-kY5" secondAttribute="centerY" id="f8I-45-TeJ"/>
+                <constraint firstItem="JQH-kW-dzw" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ngC-e5-Pdg"/>
+                <constraint firstItem="Dae-U4-jGF" firstAttribute="top" secondItem="JQH-kW-dzw" secondAttribute="bottom" constant="50" id="svw-S5-NTS"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="启动-常态" width="179" height="39"/>
+        <image name="启动-按下去的颜色值" width="179" height="39"/>
+    </resources>
+</document>

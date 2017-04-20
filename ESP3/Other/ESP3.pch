@@ -1,0 +1,55 @@
+#ifndef ESP3_pch
+#define ESP3_pch
+#endif
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#ifdef DEBUG
+#define XMGLog(...) NSLog(__VA_ARGS__)
+#else 
+#define XMGLog(...)
+#endif
+//#define GMLIPAddress @"192.168.3.152"
+//#define GMLDevice 1
+
+#import "ObjectiveLibModbus.h"
+
+#define XMGLogFunc XMGLog(@"%s", __func__);
+
+#define XMGARGBColor(a, r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/255.0]
+#define XMGColor(r, g, b) XMGARGBColor(255, (r), (g), (b))
+#define XMGGrayColor(v) XMGColor((v), (v), (v))
+#define XMGCommonBgColor XMGGrayColor(215)
+#define XMGRandomColor XMGColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
+
+#define XMGTagBgColor XMGColor(70, 142, 243)
+
+
+#define XMGWeakSelf __weak typeof(self) weakSelf = self;
+
+#define XMGWriteToPlist(data, filename) [data writeToFile:[NSString stringWithFormat:@"/Users/chenhao/Desktop/%@.plist", filename] atomically:YES];
+#define GMLTimerInterval 1
+
+#define screenH [UIScreen mainScreen].bounds.size.height
+#define screenW [UIScreen mainScreen].bounds.size.width
+
+#define iPhone6P ([UIScreen mainScreen].bounds.size.height == 736)
+#define iPhone6 ([UIScreen mainScreen].bounds.size.height == 667)
+#define iPhone5 ([UIScreen mainScreen].bounds.size.height == 568)
+#define iPhone4 ([UIScreen mainScreen].bounds.size.height == 480)
+#import "UIView+Frame.h"
+//#import "UIBarButtonItem+Item.h"
+//#import "UIImage+Image.h"
+#import "UIView+Xib.h"
+#import "UITextField+Placeholder.h"
+//#import "UIImageView+Download.h"
+#import "GlobeConst.h"
+
+#endif 
