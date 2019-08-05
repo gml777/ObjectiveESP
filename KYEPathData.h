@@ -1,8 +1,8 @@
 /*
- * 道路数据获取最短路径类，使用方法如下：
- * 先通过带参数构造函数保存道路数据，再通过get_shortest_path_info接口返回指定起点到终点的距离和路径信息
+ * 获取最短路径类，使用方法如下：
+ * 先通过带参数构造函数保存，再通过get_shortest_path_info接口返回指定起点到终点的距离和路径信息
  * 注意事项：
- * 1.道路数据必须是结构化数据，格式参考link.txt和node.txt 去除文件头 节点id是非负数，不可重复
+ * 1.必须是结构化数据，格式参考link.txt和node.txt 去除文件头 节点id是非负数，不可重复
  * 2.需要c++11以上编译器支持，通过make file编译安装nlohmann_json. 
  */ 
 
@@ -24,7 +24,7 @@ using json = nlohmann::json;
 
 class KYEPathData {
 public:
-    // 构造函数，先通过传递一个node文件和一个link文件，构建道路数据
+    // 构造函数，先通过传递一个node文件和一个link文件，构建
     KYEPathData(string node_file_path, string link_file_path);
     
     // 获取最短路径方法，输入一个起始节点名字和一个终止节点名字，返回json格式数据
@@ -63,7 +63,7 @@ private:
 private:
     // 求指定起点nodeid和终点nodeid的最短距离
     vector<float> DIJKSTRA(int start, int end);
-    // 解析文件，创建道路数据结构并保存到类属性，便于后续查询
+    // 解析文件，创建结构并保存到类属性，便于后续查询
     void import_data_from_file(string link_data_path, string node_data_path);
 };
 
