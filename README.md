@@ -1,8 +1,8 @@
 /*
- * 道路数据获取最短路径类，使用方法如下：
- * 先通过带参数构造函数保存道路数据，再通过get_shortest_path_info接口返回指定起点到终点的距离和路径信息
+ * 获取最短路径类，使用方法如下：
+ * 先通过带参数构造函数保存，再通过get_shortest_path_info接口返回指定起点到终点的距离和路径信息
  * 注意事项：
- * 1.道路数据必须是结构化数据，格式参考link.txt和node.txt 但是需要去除文件头，正式输入的文件格式参考link_data node_with_no_header 节点id是非负数，不可重复
+ * 1.必须是结构化数据，格式参考link.txt和node.txt 但是需要去除文件头，正式输入的文件格式参考link_data node_with_no_header 节点id是非负数，不可重复
  * 2.需要c++11以上编译器支持，通过make file编译安装nlohmann_json. 
  */ 
 
